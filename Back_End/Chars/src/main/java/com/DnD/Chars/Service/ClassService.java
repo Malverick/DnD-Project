@@ -1,6 +1,7 @@
 package com.DnD.Chars.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,5 +21,8 @@ public class ClassService {
 	public List<ClassEntity> getAllClasses() {
 		List<ClassEntity> classes = (List<ClassEntity>) classRepository.findAll();
 		return classes;
+	}
+	public Optional<ClassEntity> getClassByName(int id) {
+		return classRepository.findById(id);
 	}
 }
