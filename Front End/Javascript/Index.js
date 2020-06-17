@@ -3,6 +3,9 @@ window.onload = showChars();
 
 let doc = document.getElementById("listholder");
 
+function dropDown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
 function human() {
     document.getElementById("dropdown1").value = "Human";

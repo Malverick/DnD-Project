@@ -34,30 +34,57 @@
             </div>
         </div>
 
-        
-        <div id="characterCreator">
-            <div>
-                <input id="name" type="text" placeholder="Enter your character name...">
+
+        <div id="mainContent">
+            <div id="charListing">
+                <p>Existing Charaters</p>
             </div>
-            <div class="dropdown1">
-                <input id="dropdown1" type="text" value="Race">
-                <div class="dropdown-content1">
-                    <button onclick="human()">Human</button>
-                    <button onclick="high_elf()">High Elf</button>
-                    <button onclick="dwarf()">Dwarf</button>
+            <div id="charCreator">
+                <div id="charColumn">
+                    <div class="dropdown">
+                        <button class="pageButton" onclick="dropDown()">Race</button>
+                        <div id="Dropdown" class="dropdown-content">
+                            <button onclick="human()">Human</button>
+                            <Button onclick="high-elf()">High Elf</Button>
+                            <Button onclick="dwarf()">Dwarf</Button>
+                        </div>
+                    </div>
+                </div>
+                <div id="charColumn">
+                    <div>
+                        <input class="pageButton" type="text" placeholder="Enter your character name...">
+                    </div>
+                    <div>
+                        <button class="pageButton" onclick="location.href='#'">temporary</button>
+                    </div>
+                    <div>
+                        <button class="pageButton" onclick="location.href='#'">temporary</button>
+                    </div>
+                </div>
+                <div id="charColumn">
+                    <button class="pageButton" onclick="location.href='#'">temporary</button>
                 </div>
             </div>
-            <div class="dropdown2">
-                <input id="dropdown2" type="text" value="Class">
-                <div class="dropdown-content2">
-                    <button onclick="wizard()">Wizard</button>
-                    <button onclick="fighter()">Fighter</button>
-                    <button onclick="cleric()">Cleric</button>
-                </div>
-            </div>
-            <button id="create" onclick="postCharacter()">Create</button>
-            <button id="goToCharPage" onclick="location.href='characterpage.html'">Show Character List</button>
         </div>
+        
+        <div class="dropdown1">
+            <input id="dropdown1" type="text" value="Race">
+            <div class="dropdown-content1">
+                <button onclick="human()">Human</button>
+                <button onclick="high_elf()">High Elf</button>
+                <button onclick="dwarf()">Dwarf</button>
+            </div>
+        </div>
+        <div class="dropdown2">
+            <input id="dropdown2" type="text" value="Class">
+            <div class="dropdown-content2">
+                <button onclick="wizard()">Wizard</button>
+                <button onclick="fighter()">Fighter</button>
+                <button onclick="cleric()">Cleric</button>
+            </div>
+        </div>
+        <button id="create" onclick="postCharacter()">Create</button>
+        <button id="goToCharPage" onclick="location.href='characterpage.html'">Show Character List</button>
 
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
