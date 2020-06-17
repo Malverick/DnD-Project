@@ -1,11 +1,60 @@
 body {
-    background-image: url("./DND\ background.jpg");
-    color: white;
+    background-color:lightgrey;
+    margin:0;
+    padding:0;
   }
+#wrapper{
+    margin:0 auto;
+    width:85%;
+    background-color:darkgrey;
+    height:1000px;
+    padding:0;
+}
+#header {
+    display: flex;
+    align-items: center;
+    font-family: 'Zilla Slab', serif;
+    background-color: #969696;
+    justify-content:center;
+    flex-direction:column;
+}
+#hTitle {
+    justify-content: space-around;
+    font-size: 25px;
+    font-weight: 600;
+}
+#hNavigation {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 450;
+}
+
+.hLogo {
+    height: 50px;
+    margin:5px;
+}
+
+.navButton {
+    height: 48px;
+    width:auto;
+    background-color: #404040;
+    color:ghostwhite;
+}
+.navButton:hover {
+        height: 48px;
+        width: auto;
+        background-color: #b7b7b7;
+        color: black;
+}
+
 input {
   color: darkgray;
 }
-header {
+/*
+    header {
     font-family:'Times New Roman', Times, serif;
     font-size: 200% ;
     color: #ededed; 
@@ -14,20 +63,14 @@ header {
     padding-left:600px ; 
     height: 50px;
 }
+*/
+
 #i01 {
     position: absolute;
     right: 0;
     top: 0;
 }
-#Delete {
-  position: absolute;
-  right: 50px;
-  top: 1px;
-  height: 48px;
-  width: 100px;
-  font-size: 50%;
-  background-color:#404040; 
-}
+
 button {
     width: 150px;
     background-color: lightslategrey;
@@ -171,16 +214,7 @@ button {
   background-color: #404040;
   font-size: 90%;
 }
-#Update{
-  top: 1px;
-  position: absolute;
-  right: 150px;
-  width:100px;
-  height:48px;
-  text-align: center;
-  font-size: 50%;
-  background-color: #404040
-}
+
 #updateChar {
   position: absolute;
   top:310px;
