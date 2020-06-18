@@ -40,41 +40,38 @@
                 <p>Existing Charaters</p>
             </div>
             <div id="charCreator">
-                <div id="charColumn">
-                    <div class="dropdown">
-                        <button class="pageButton" onclick="dropDown()">Race</button>
-                        <div id="Dropdown" class="dropdown-content">
-                            <button onclick="human()">Human</button>
-                            <Button onclick="high-elf()">High Elf</Button>
-                            <Button onclick="dwarf()">Dwarf</Button>
+                <div class="charColumn">
+                    <div class="pageObject">
+                        <div class="dropdownParent">
+                            <button id="racialChoice" class="pageButton" onclick="dropDown()">Race</button>
+                            <div class="dropdown-content">
+                                <button class="dropButton" onclick="human()">Human</button>
+                                <Button class="dropButton" onclick="high_elf()">High Elf</Button>
+                                <Button class="dropButton" onclick="dwarf()">Dwarf</Button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="charColumn">
-                    <div>
+                <div class="charColumn">
+                    <div class="pageObject">
                         <input class="pageButton" type="text" placeholder="Enter your character name...">
                     </div>
-                    <div>
+                    <div class="pageObject">
                         <button class="pageButton" onclick="location.href='#'">temporary</button>
                     </div>
-                    <div>
+                    <div class="pageObject">
                         <button class="pageButton" onclick="location.href='#'">temporary</button>
                     </div>
                 </div>
-                <div id="charColumn">
-                    <button class="pageButton" onclick="location.href='#'">temporary</button>
+                <div class="charColumn">
+                    <div class="pageObject">
+                        <button class="pageButton" onclick="location.href='#'">temporary</button>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="dropdown1">
-            <input id="dropdown1" type="text" value="Race">
-            <div class="dropdown-content1">
-                <button onclick="human()">Human</button>
-                <button onclick="high_elf()">High Elf</button>
-                <button onclick="dwarf()">Dwarf</button>
-            </div>
-        </div>
+       
         <div class="dropdown2">
             <input id="dropdown2" type="text" value="Class">
             <div class="dropdown-content2">
@@ -96,7 +93,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
                 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
                 crossorigin="anonymous"></script>
-        <script src="./Javascript/Index.js"></script>
+        <script src="Javascript/Index.js"></script>
     </div>
 </body>
 </html>

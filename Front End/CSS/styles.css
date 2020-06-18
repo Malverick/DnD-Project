@@ -1,19 +1,20 @@
 body {
-    background-color:lightgrey;
-    margin:0;
-    padding:0;
-  }
+    background-color: lightgrey;
+    margin: 0;
+    padding: 0;
+    font-family: 'Zilla Slab', serif;
+}
 #wrapper{
     margin:0 auto;
     width:85%;
     background-color:darkgrey;
-    height:1000px;
+    height:auto;
     padding:0;
+
 }
 #header {
     display: flex;
     align-items: center;
-    font-family: 'Zilla Slab', serif;
     background-color: #969696;
     justify-content:center;
     flex-direction:column;
@@ -69,29 +70,40 @@ input {
     background-color:red;
 }
 
-#charColumn{
+.charColumn{
     flex-direction:column;
     align-items:center;
 }
+.pageObject{
+    margin:15px;
+}
 .pageButton {
     height: 48px;
-    width: 225px;
+    width: 200px;
     background-color: #404040;
     color: ghostwhite;
-    margin:15px
 }
-.dropdown {
+
+.dropdownParent {
     position: relative;
-    display: inline-block;
+}
+.dropdownParent:hover .dropdown-content {
+    display: block;
 }
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+}
+.dropButton {
+    height: 48px;
+    width: 200px;
+    background-color: #545454;
+    color: ghostwhite;
+}
+.dropButton:hover {
+    background-color: #404040;
 }
 
 #i01 {

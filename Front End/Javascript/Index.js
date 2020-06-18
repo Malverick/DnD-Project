@@ -1,22 +1,25 @@
 'use strict'
-window.onload = showChars();
+//window.onload = showChars();
 
 let doc = document.getElementById("listholder");
 
 function dropDown() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
-
+//race dropdown options
 function human() {
-    document.getElementById("dropdown1").value = "Human";
+    document.getElementById("racialChoice").innerHTML = "Human";
+    //need to add the code which tells james' api which choice the user has chosen
 }
 function high_elf() {
-    document.getElementById("dropdown1").value = "High Elf";
+    document.getElementById("racialChoice").innerHTML = "High Elf";
 }
 function dwarf() {
-    document.getElementById("dropdown1").value = "Dwarf";
+    document.getElementById("racialChoice").innerHTML = "Dwarf";
 }
+//-------------
 
+// Class dropdown options
 function wizzard() {
     document.getElementById("dropdown2").value = "Wizzard";
 }
@@ -26,6 +29,8 @@ function fighter() {
 function cleric() {
     document.getElementById("dropdown2").value = "Cleric";
 }
+//----------------
+
 // async function getRaces() {
 //     const raceResponse = await fetch('http://localhost:8080/dndchars/getThingRace');
 //     const raceJson = await raceResponse.json();
@@ -81,32 +86,32 @@ async function postCharacter() {
 //     charName = document.getElementById("name").value;
 //     const characterResponse = await fetch('http://localhost:8080/dndchars/deleteThingChar/' + charName, { method: 'PUT' });
 // }
-async function showChars() {
-    if (document.getElementById("listholder").innerHTML == "") {
-        console.log(" moving on ");
-    }
-    else{
-        document.getElementById("listholder").innerHTML = "";
-    }
-    const characterResponse = await fetch('http://localhost:8080/dndchars/getThingChar/');
-    const characterJson = await characterResponse.json();
-    console.log(characterJson);
+//async function showChars() {
+//    if (document.getElementById("listholder").innerHTML == "") {
+//        console.log(" moving on ");
+//    }
+//    else{
+//        document.getElementById("listholder").innerHTML = "";
+//    }
+    //const characterResponse = await fetch('http://localhost:8080/dndchars/getThingChar/');
+    //const characterJson = await characterResponse.json();
+    //console.log(characterJson);
 
-    for (let d of characterJson) {
-        let st = document.createElement("div");
-        st.className = "Char_List";
-        let h = document.createElement("h4");
-        let p = document.createElement("p");
-        h.innerText = d.charName + "\n";
-        p.innerText = "\n" + d.race.race + "\n \n" + d.class.class;
+//    for (let d of characterJson) {
+//        let st = document.createElement("div");
+//        st.className = "Char_List";
+//        let h = document.createElement("h4");
+//        let p = document.createElement("p");
+//        h.innerText = d.charName + "\n";
+//        p.innerText = "\n" + d.race.race + "\n \n" + d.class.class;
 
-        let img = document.createElement("img");
-        img.className = "classPics";
+//        let img = document.createElement("img");
+//        img.className = "classPics";
 
-        st.append(h, img, p);
-        doc.appendChild(st);
-    }
-}
+//        st.append(h, img, p);
+//        doc.appendChild(st);
+//    }
+//}
 async function delChar() {
     const charName = document.getElementById("name").value;
     console.log('http://localhost:8080/dndchars/deleteThingChar/' + charName)
