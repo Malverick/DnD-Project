@@ -1,5 +1,9 @@
 'use strict'
-//window.onload = showChars();
+//if (typeof jQuery == "undefined") {
+//    alert("jQuery is not installed");
+//} else {
+//    alert("jQuery is installed");
+//}
 
 let doc = document.getElementById("listholder");
 
@@ -7,27 +11,106 @@ function dropDown() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 //race dropdown options
+$(".dropButton").click(function () {
+    var clickedObj = $(this).text();
+    document.getElementById("racialChoice").innerHTML = clickedObj;
+    console.log("drop down button clicked: " + clickedObj + "" + $("#racialChoice").attr("class"));
+
+
+    //switch (clickedObj) {
+    //    case "Dwarf":
+
+    //        break;
+    //    case "Elf":
+
+    //        break;
+    //    case "Halflng":
+
+    //        break;
+    //    case "Human":
+
+    //        break;
+    //    case "Dragonborn":
+
+    //        break;
+    //    case "Gnome":
+
+    //        break;
+    //    case "Half-Elf":
+
+    //        break;
+    //    case "Half-orc":
+
+    //        break;
+    //    case "Tiefling":
+
+    //        break;
+    //}
+});
+
+//function dwarf() {
+//    document.getElementById("racialChoice").innerHTML = "Dwarf";
+//    //need to add the code which tells james' api which choice the user has chosen
+//}
+function elf() {
+    document.getElementById("racialChoice").innerHTML = "Elf";
+}
+function halfling() {
+    document.getElementById("racialChoice").innerHTML = "Halfling";
+}
 function human() {
     document.getElementById("racialChoice").innerHTML = "Human";
-    //need to add the code which tells james' api which choice the user has chosen
 }
-function high_elf() {
-    document.getElementById("racialChoice").innerHTML = "High Elf";
+function dragonborn() {
+    document.getElementById("racialChoice").innerHTML = "Dragonborn";
 }
-function dwarf() {
-    document.getElementById("racialChoice").innerHTML = "Dwarf";
+function gnome() {
+    document.getElementById("racialChoice").innerHTML = "Gnome";
+}
+function half_elf() {
+    document.getElementById("racialChoice").innerHTML = "Half-Elf";
+}
+function half_orc() {
+    document.getElementById("racialChoice").innerHTML = "Half-Orc";
+}
+function tiefling() {
+    document.getElementById("racialChoice").innerHTML = "Tiefling";
 }
 //-------------
 
 // Class dropdown options
-function wizzard() {
-    document.getElementById("dropdown2").value = "Wizzard";
+function barbarian() {
+    document.getElementById("").value = "Barbarian";
+}
+function bard() {
+    document.getElementById("dropdown2").value = "Bard";
+}
+function druid() {
+    document.getElementById("dropdown2").value = "Druid";
 }
 function fighter() {
     document.getElementById("dropdown2").value = "Fighter";
 }
-function cleric() {
-    document.getElementById("dropdown2").value = "Cleric";
+function monk() {
+    document.getElementById("dropdown2").value = "Monk";
+}
+function paladin() {
+    document.getElementById("dropdown2").value = "Paladin";
+}
+function ranger() {
+    document.getElementById("dropdown2").value = "Ranger";
+}
+function rogue() {
+    document.getElementById("dropdown2").value = "Rogue";
+}
+function sorcerer() {
+    document.getElementById("dropdown2").value = "Sorcerer";
+}
+function warlock() {
+    document.getElementById("dropdown2").value = "Warlock";
+}
+function wizard() {
+    document.getElementById("dropdown2").value = "Wizard";
 }
 //----------------
 
@@ -50,6 +133,8 @@ function cleric() {
 async function postCharacter() {
     const charName = document.getElementById("name");
     let charRace = document.getElementById("dropdown1");
+
+    //change the below to a case statement ----------------------------------
     if (charRace.value == "Human") {
         charRace.value = 1;
     }

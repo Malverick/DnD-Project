@@ -7,6 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./Bootstrap\css\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="CSS\styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -41,15 +49,21 @@
             </div>
             <div id="charCreator">
                 <div class="charColumn">
-                    <div class="pageObject">
-                        <div class="dropdownParent">
-                            <button id="racialChoice" class="pageButton" onclick="dropDown()">Race</button>
-                            <div class="dropdown-content">
-                                <button class="dropButton" onclick="human()">Human</button>
-                                <Button class="dropButton" onclick="high_elf()">High Elf</Button>
-                                <Button class="dropButton" onclick="dwarf()">Dwarf</Button>
-                            </div>
+                    <div class="dropdownParent pageObject">
+                        <div id="racialChoice" class="pageButton" onclick="dropDown()">
+                            <span class="center">Race</span>
                         </div>
+                        <ul class="dropdown-content">
+                            <li class="dropButton">Dwarf</li>
+                            <li class="dropButton">Elf</li>
+                            <li class="dropButton">Halfling</li>
+                            <li class="dropButton">Human</li>
+                            <li class="dropButton">Dragonborn</li>
+                            <li class="dropButton">Gnome</li>
+                            <li class="dropButton">Half-Elf</li>
+                            <li class="dropButton">Half-Orc</li>
+                            <li class="dropButton">Tiefling</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="charColumn">
@@ -57,7 +71,12 @@
                         <input class="pageButton" type="text" placeholder="Enter your character name...">
                     </div>
                     <div class="pageObject">
-                        <button class="pageButton" onclick="location.href='#'">temporary</button>
+                        <button class="pageButton" onclick="location.href='#'">Class</button>
+                        <div class="dropdown-content">
+                            <button class="dropButton" onclick="human()"></button>
+                            <Button class="dropButton" onclick="high_elf()">High Elf</Button>
+                            <Button class="dropButton" onclick="dwarf()">Dwarf</Button>
+                        </div>
                     </div>
                     <div class="pageObject">
                         <button class="pageButton" onclick="location.href='#'">temporary</button>
@@ -84,15 +103,7 @@
         <button id="goToCharPage" onclick="location.href='characterpage.html'">Show Character List</button>
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                crossorigin="anonymous"></script>
+       
         <script src="Javascript/Index.js"></script>
     </div>
 </body>
