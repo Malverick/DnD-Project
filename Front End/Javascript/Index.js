@@ -5,113 +5,19 @@
 //    alert("jQuery is installed");
 //}
 
-let doc = document.getElementById("listholder");
-
-function dropDown() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
 //race dropdown options
-$(".dropButton").click(function () {
+
+$(".charRace").click(function () {
     var clickedObj = $(this).text();
-    document.getElementById("racialChoice").innerHTML = clickedObj;
-    console.log("drop down button clicked: " + clickedObj + "" + $("#racialChoice").attr("class"));
-
-
-    //switch (clickedObj) {
-    //    case "Dwarf":
-
-    //        break;
-    //    case "Elf":
-
-    //        break;
-    //    case "Halflng":
-
-    //        break;
-    //    case "Human":
-
-    //        break;
-    //    case "Dragonborn":
-
-    //        break;
-    //    case "Gnome":
-
-    //        break;
-    //    case "Half-Elf":
-
-    //        break;
-    //    case "Half-orc":
-
-    //        break;
-    //    case "Tiefling":
-
-    //        break;
-    //}
+    document.getElementById("racialChoiceText").innerHTML = clickedObj;
 });
-
-//function dwarf() {
-//    document.getElementById("racialChoice").innerHTML = "Dwarf";
-//    //need to add the code which tells james' api which choice the user has chosen
-//}
-function elf() {
-    document.getElementById("racialChoice").innerHTML = "Elf";
-}
-function halfling() {
-    document.getElementById("racialChoice").innerHTML = "Halfling";
-}
-function human() {
-    document.getElementById("racialChoice").innerHTML = "Human";
-}
-function dragonborn() {
-    document.getElementById("racialChoice").innerHTML = "Dragonborn";
-}
-function gnome() {
-    document.getElementById("racialChoice").innerHTML = "Gnome";
-}
-function half_elf() {
-    document.getElementById("racialChoice").innerHTML = "Half-Elf";
-}
-function half_orc() {
-    document.getElementById("racialChoice").innerHTML = "Half-Orc";
-}
-function tiefling() {
-    document.getElementById("racialChoice").innerHTML = "Tiefling";
-}
 //-------------
 
 // Class dropdown options
-function barbarian() {
-    document.getElementById("").value = "Barbarian";
-}
-function bard() {
-    document.getElementById("dropdown2").value = "Bard";
-}
-function druid() {
-    document.getElementById("dropdown2").value = "Druid";
-}
-function fighter() {
-    document.getElementById("dropdown2").value = "Fighter";
-}
-function monk() {
-    document.getElementById("dropdown2").value = "Monk";
-}
-function paladin() {
-    document.getElementById("dropdown2").value = "Paladin";
-}
-function ranger() {
-    document.getElementById("dropdown2").value = "Ranger";
-}
-function rogue() {
-    document.getElementById("dropdown2").value = "Rogue";
-}
-function sorcerer() {
-    document.getElementById("dropdown2").value = "Sorcerer";
-}
-function warlock() {
-    document.getElementById("dropdown2").value = "Warlock";
-}
-function wizard() {
-    document.getElementById("dropdown2").value = "Wizard";
-}
+$(".charClass").click(function () {
+    var clickedObj = $(this).text();
+    document.getElementById("classChoiceText").innerHTML = clickedObj;
+});
 //----------------
 
 // async function getRaces() {
@@ -130,37 +36,106 @@ function wizard() {
 //     console.log(characterJson);
 //     console.log(JSON.stringify(characterJson));
 // }
+function character(name, raceID, classID) {
+    this.name = "#name"; 
+    this.raceID = "#rID";
+    this.classID = "#cID";
+}
 async function postCharacter() {
-    const charName = document.getElementById("name");
-    let charRace = document.getElementById("dropdown1");
+    var char = new character()
+    char.name = document.getElementById("enteredName").value;
+    var charRace = $("#racialChoiceText").text();
+    var charClass = $("#classChoiceText").text();
+    console.log();
 
-    //change the below to a case statement ----------------------------------
-    if (charRace.value == "Human") {
-        charRace.value = 1;
+    //Race Selector
+    switch (charRace) {
+        case "Dwarf":
+            char.raceID = 1;
+            break;
+        case "Elf":
+            char.raceID = 2;
+            break;
+        case "Halfling":
+            char.raceID = 3;
+            break;
+        case "Human":
+            char.raceID = 4;
+            break;
+        case "Dragonborn":
+            char.raceID = 5;
+            break;
+        case "Gnome":
+            char.raceID = 6;
+            break;
+        case "Half-Elf":
+            char.raceID = 7;
+            break;
+        case "Half-Orc":
+            char.raceID = 8;
+            break;
+        case "Tiefling":
+            char.raceID = 9;
+            break;
     }
-    else if (charRace.value == "High Elf") {
-        charRace.value = 2;
+    //Class selector
+    switch (charClass) {
+        case "Barbarian":
+            char.classID = 1;
+            break;
+        case "Bard":
+            char.classID = 2;
+            break;
+        case "Cleric":
+            char.classID = 3;
+            break;
+        case "Druid":
+            char.classID = 4;
+            break;
+        case "Fighter":
+            char.classID = 5;
+            break;
+        case "Monk":
+            char.classID = 6;
+            break;
+        case "Paladin":
+            char.classID = 7;
+            break;
+        case "Ranger":
+            char.classID = 8;
+            break;
+        case "Rogue":
+            char.classID = 9;
+            break;
+        case "Sorcerer":
+            char.classID = 10;
+            break;
+        case "Warlock":
+            char.classID = 11;
+            break;
+        case "Wizard":
+            char.classID = 12;
+            break;
     }
-    else if (charRace.value == "Dwarf") {
-        charRace.value = 3;
-    } else {
-        console.log("No valid Race input");
+
+    if (char.classID == "#cID" && char.raceID == "#rID") {
+        alert("Please select a race and a class")
+        return;
+    } else if (char.classID == "#cID") {
+        alert("Please select a class")
+        return;
+    } else if (char.raceID == "#rID") {
+        alert("Please select a race")
+        return;
+    } else if (char.name == "undefined") {
+        alert("Please enter a name")
+        return;
     }
-    let charClass = document.getElementById("dropdown2");
-    if (charClass.value == "Wizzard") {
-        charClass.value = 1;
-    }
-    else if (charClass.value == "Fighter") {
-        charClass.value = 2;
-    }
-    else if (charClass.value == "Cleric") {
-        charClass.value = 3;
-    } else {
-        console.log("No valid class input");
-    }
-    console.log(charName.value + charRace.value + charClass.value);
-    console.log('http://localhost:8080/dndchars/addThingChar/' + charName.value + "/" + charRace.value + "/" + charClass.value);
-    const characterResponse = await fetch('http://localhost:8080/dndchars/addThingChar/' + charName.value + "/" + charRace.value + "/" + charClass.value, { method: 'POST' });
+     
+
+        console.log(char.name +"-"+ char.raceID +"-"+ char.classID);
+    //console.log('http://localhost:8080/dndchars/addThingChar/' + charName.value + "/" + charRace.value + "/" + charClass.value);
+    //const characterResponse = await fetch('http://localhost:8080/dndchars/addThingChar/' + charName.value + "/" + charRace.value + "/" + charClass.value, { method: 'POST' });
 }
 
 // async function deleteCharacter() {

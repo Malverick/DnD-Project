@@ -50,60 +50,54 @@
             <div id="charCreator">
                 <div class="charColumn">
                     <div class="dropdownParent pageObject">
-                        <div id="racialChoice" class="pageButton" onclick="dropDown()">
-                            <span class="center">Race</span>
+                        <div id="racialChoice" class="pageButton" >
+                            <p id="racialChoiceText" class="center">Race</p>
                         </div>
                         <ul class="dropdown-content">
-                            <li class="dropButton">Dwarf</li>
-                            <li class="dropButton">Elf</li>
-                            <li class="dropButton">Halfling</li>
-                            <li class="dropButton">Human</li>
-                            <li class="dropButton">Dragonborn</li>
-                            <li class="dropButton">Gnome</li>
-                            <li class="dropButton">Half-Elf</li>
-                            <li class="dropButton">Half-Orc</li>
-                            <li class="dropButton">Tiefling</li>
+                            <li class="charRace">Dwarf</li>
+                            <li class="charRace">Elf</li>
+                            <li class="charRace">Halfling</li>
+                            <li class="charRace">Human</li>
+                            <li class="charRace">Dragonborn</li>
+                            <li class="charRace">Gnome</li>
+                            <li class="charRace">Half-Elf</li>
+                            <li class="charRace">Half-Orc</li>
+                            <li class="charRace">Tiefling</li>
                         </ul>
                     </div>
                 </div>
                 <div class="charColumn">
                     <div class="pageObject">
-                        <input class="pageButton" type="text" placeholder="Enter your character name...">
+                        <input id="enteredName" class="pageButton" type="text" placeholder="Enter your character name...">
                     </div>
-                    <div class="pageObject">
-                        <button class="pageButton" onclick="location.href='#'">Class</button>
-                        <div class="dropdown-content">
-                            <button class="dropButton" onclick="human()"></button>
-                            <Button class="dropButton" onclick="high_elf()">High Elf</Button>
-                            <Button class="dropButton" onclick="dwarf()">Dwarf</Button>
+                    <div class="dropdownParent pageObject">
+                        <div id="classChoice" class="pageButton" >
+                            <p id="classChoiceText" class="center">Class</p>
                         </div>
-                    </div>
-                    <div class="pageObject">
-                        <button class="pageButton" onclick="location.href='#'">temporary</button>
+                        <ul class="dropdown-content">
+                            <li class="charClass">Barbarian</li>
+                            <li class="charClass">Bard</li>
+                            <li class="charClass">Cleric</li>
+                            <li class="charClass">Druid</li>
+                            <li class="charClass">Fighter</li>
+                            <li class="charClass">Monk</li>
+                            <li class="charClass">Paladin</li>
+                            <li class="charClass">Ranger</li>
+                            <li class="charClass">Rogue</li>
+                            <li class="charClass">Sorcerer</li>
+                            <li class="charClass">Warlock</li>
+                            <li class="charClass">Wizard</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="charColumn">
                     <div class="pageObject">
-                        <button class="pageButton" onclick="location.href='#'">temporary</button>
+                        <button class="pageButton" onclick="postCharacter()">Create</button>
                     </div>
                 </div>
             </div>
         </div>
-        
-       
-        <div class="dropdown2">
-            <input id="dropdown2" type="text" value="Class">
-            <div class="dropdown-content2">
-                <button onclick="wizard()">Wizard</button>
-                <button onclick="fighter()">Fighter</button>
-                <button onclick="cleric()">Cleric</button>
-            </div>
-        </div>
-        <button id="create" onclick="postCharacter()">Create</button>
-        <button id="goToCharPage" onclick="location.href='characterpage.html'">Show Character List</button>
-
-
-       
+   
         <script src="Javascript/Index.js"></script>
     </div>
 </body>
