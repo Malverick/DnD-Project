@@ -17,7 +17,7 @@ public class ClassEntity {
 	private String hitDice;
 	
 	@Column
-	private String amorProf;
+	private String armorProf;
 	
 	@Column
 	private String weaponProf;
@@ -82,12 +82,12 @@ public class ClassEntity {
 		this.hitDice = hitDice;
 	}
 
-	public String getAmorProf() {
-		return amorProf;
+	public String getArmorProf() {
+		return armorProf;
 	}
 
-	public void setAmorProf(String amorProf) {
-		this.amorProf = amorProf;
+	public void setArmorProf(String armorProf) {
+		this.armorProf = armorProf;
 	}
 
 	public String getWeaponProf() {
