@@ -19,7 +19,10 @@ $(".charClass").click(function () {
     document.getElementById("classChoiceText").innerHTML = clickedObj;
 });
 //----------------
-
+// test jquery ui dropdowns
+$(function () {
+    $("#racialChoice").selectmenu();
+});
 // async function getRaces() {
 //     const raceResponse = await fetch('http://localhost:8080/dndchars/getThingRace');
 //     const raceJson = await raceResponse.json();
@@ -43,7 +46,7 @@ function character(name, raceID, classID) {
 }
 async function postCharacter() {
     var char = new character()
-    char.name = document.getElementById("enteredName").value;
+    char.Name = document.getElementById("enteredName").value;
     var charRace = $("#racialChoiceText").text();
     var charClass = $("#classChoiceText").text();
     console.log();
@@ -117,23 +120,30 @@ async function postCharacter() {
             char.classID = 12;
             break;
     }
+    // Check to make sure the use has entered all the required fields
+    //var selectNRC = "Please enter your chosen ";
+    //var temp;
+    //if (char.Name == "") {
+    //    temp = "name ";
+    //    selectNRC.concat(temp);
+    //    console.log(selectNRC);
+    //    return;
+    //}
+    //if (char.raceID == "#rID") {
+    //    temp = "race ";
+    //    selectNRC.concat(temp);
+    //    console.log(selectNRC);
+    //    return;
+    //}
+    //if (char.classID == "#cID") {
+    //    temp = "class ";
+    //    selectNRC.concat(temp);
+    //    console.log(selectNRC);
+    //    return;
+    //}
+    // Add the script to post the character details to the API below this point
 
-    if (char.classID == "#cID" && char.raceID == "#rID") {
-        alert("Please select a race and a class")
-        return;
-    } else if (char.classID == "#cID") {
-        alert("Please select a class")
-        return;
-    } else if (char.raceID == "#rID") {
-        alert("Please select a race")
-        return;
-    } else if (char.name == "undefined") {
-        alert("Please enter a name")
-        return;
-    }
-     
-
-        console.log(char.name +"-"+ char.raceID +"-"+ char.classID);
+        console.log(char.Name +"-"+ char.raceID +"-"+ char.classID);
     //console.log('http://localhost:8080/dndchars/addThingChar/' + charName.value + "/" + charRace.value + "/" + charClass.value);
     //const characterResponse = await fetch('http://localhost:8080/dndchars/addThingChar/' + charName.value + "/" + charRace.value + "/" + charClass.value, { method: 'POST' });
 }

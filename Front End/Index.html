@@ -6,7 +6,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./Bootstrap\css\bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="CSS\styles.css">
+    <link rel="stylesheet" type="text/css" href="CSS\styles.css" >
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -49,8 +51,23 @@
             </div>
             <div id="charCreator">
                 <div class="charColumn">
+                    <fieldset class="pageObject">
+                        <label for="racialChoice">Choose Your Race</label>
+                        <select name="racialChoice" id="racialChoice">
+                            <option class="charRace">Dwarf</option>
+                            <option class="charRace">Elf</option>
+                            <option class="charRace">Halfling</option>
+                            <option class="charRace">Human</option>
+                            <option class="charRace">Dragonborn</option>
+                            <option class="charRace">Gnome</option>
+                            <option class="charRace">Half-Elf</option>
+                            <option class="charRace">Half-Orc</option>
+                            <option class="charRace">Tiefling</option>
+                        </select>
+                    </fieldset>
                     <div class="dropdownParent pageObject">
-                        <div id="racialChoice" class="pageButton" >
+
+                        <div id="racialChoice" class="pageButton">
                             <p id="racialChoiceText" class="center">Race</p>
                         </div>
                         <ul class="dropdown-content">
@@ -71,7 +88,7 @@
                         <input id="enteredName" class="pageButton" type="text" placeholder="Enter your character name...">
                     </div>
                     <div class="dropdownParent pageObject">
-                        <div id="classChoice" class="pageButton" >
+                        <div id="classChoice" class="pageButton">
                             <p id="classChoiceText" class="center">Class</p>
                         </div>
                         <ul class="dropdown-content">
@@ -97,8 +114,9 @@
                 </div>
             </div>
         </div>
-   
+
         <script src="Javascript/Index.js"></script>
+        <script src="jquery-ui/jquery-ui.js"></script>
     </div>
 </body>
 </html>

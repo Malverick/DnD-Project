@@ -74,6 +74,16 @@ input {
     flex-direction:column;
     align-items:center;
 }
+label{
+}
+select {
+    background-color: #8e8d8d;
+    color: ghostwhite;
+}
+option:hover {
+    background-color: ghostwhite;
+    color: #8e8d8d;
+}
 ul {
     margin: 0;
     padding: 0;
@@ -82,8 +92,16 @@ li{
     list-style-type:none;
     text-align:center;
 }
-.pageObject{
-    margin:15px;
+.pageObject {
+    margin: 15px;
+    background-color: #404040;
+    color:ghostwhite;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    border:solid black 2px;
+    border-radius:4px;
+    text-align:center;
 }
 .pageButton {
     text-decoration: none;
