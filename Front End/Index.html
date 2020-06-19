@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="./Bootstrap\css\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="CSS\styles.css" >
     <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -22,29 +21,16 @@
 <body>
     <div id="header">
         <div id="hTitle">
-            <img class="hLogo" src="CSS\DnD Logo.jpg">
-            D'n'D 5e Helper
-            <img class="hLogo" src="CSS\DnD Logo.jpg">
+            <ul>
+                <li><img class="hLogo" src="CSS\DnD Logo.jpg"></li>
+                <li>D'n'D 5e Helper</li>
+                <li><button class="navButton" onclick="location.href='delete.html'">Character Creator</button></li>
+                <li><button class="navButton" onclick="location.href='update.html'">NPC Creator</button></li>
+                <li><button class="navButton" onclick="location.href='update.html'">temporary</button></li>
+            </ul>
         </div>
     </div>
     <div id="wrapper">
-        <div id="hNavigation">
-            <div id="hNav-1">
-                <button class="navButton" onclick="location.href='delete.html'">Character Creator</button>
-                <button class="navButton" onclick="location.href='update.html'">NPC Creator</button>
-                <button class="navButton" onclick="location.href='update.html'">temporary</button>
-            </div>
-            <div id="hNav-2">
-                <button class="navButton" onclick="location.href='update.html'">temporary</button>
-                <button class="navButton" onclick="location.href='update.html'">temporary</button>
-            </div>
-            <div id="hNav-3">
-                <button class="navButton" onclick="location.href='update.html'">temporary</button>
-                <button class="navButton" onclick="location.href='update.html'">temporary</button>
-            </div>
-        </div>
-
-
         <div id="mainContent">
             <div id="charListing">
                 <p>Existing Charaters</p>
@@ -65,51 +51,33 @@
                             <option class="charRace">Tiefling</option>
                         </select>
                     </fieldset>
-                    <div class="dropdownParent pageObject">
-
-                        <div id="racialChoice" class="pageButton">
-                            <p id="racialChoiceText" class="center">Race</p>
-                        </div>
-                        <ul class="dropdown-content">
-                            <li class="charRace">Dwarf</li>
-                            <li class="charRace">Elf</li>
-                            <li class="charRace">Halfling</li>
-                            <li class="charRace">Human</li>
-                            <li class="charRace">Dragonborn</li>
-                            <li class="charRace">Gnome</li>
-                            <li class="charRace">Half-Elf</li>
-                            <li class="charRace">Half-Orc</li>
-                            <li class="charRace">Tiefling</li>
-                        </ul>
-                    </div>
+                   
                 </div>
                 <div class="charColumn">
                     <div class="pageObject">
                         <input id="enteredName" class="pageButton" type="text" placeholder="Enter your character name...">
                     </div>
-                    <div class="dropdownParent pageObject">
-                        <div id="classChoice" class="pageButton">
-                            <p id="classChoiceText" class="center">Class</p>
-                        </div>
-                        <ul class="dropdown-content">
-                            <li class="charClass">Barbarian</li>
-                            <li class="charClass">Bard</li>
-                            <li class="charClass">Cleric</li>
-                            <li class="charClass">Druid</li>
-                            <li class="charClass">Fighter</li>
-                            <li class="charClass">Monk</li>
-                            <li class="charClass">Paladin</li>
-                            <li class="charClass">Ranger</li>
-                            <li class="charClass">Rogue</li>
-                            <li class="charClass">Sorcerer</li>
-                            <li class="charClass">Warlock</li>
-                            <li class="charClass">Wizard</li>
-                        </ul>
-                    </div>
+                    <fieldset class="pageObject">
+                        <label for="classChoice">Choose Your Class</label>
+                        <select name="classChoice" id="classChoice">
+                            <option class="charClass">Barbarian</option>
+                            <option class="charClass">Bard</option>
+                            <option class="charClass">Cleric</option>
+                            <option class="charClass">Druid</option>
+                            <option class="charClass">Fighter</option>
+                            <option class="charClass">Monk</option>
+                            <option class="charClass">Paladin</option>
+                            <option class="charClass">Ranger</option>
+                            <option class="charClass">Rogue</option>
+                            <option class="charClass">Sorcerer</option>
+                            <option class="charClass">Warlock</option>
+                            <option class="charClass">Wizard</option>
+                        </select>
+                    </fieldset>
                 </div>
                 <div class="charColumn">
                     <div class="pageObject">
-                        <button class="pageButton" onclick="postCharacter()">Create</button>
+                        <button name="createCharacter" class="pageButton" onclick="postCharacter()"><label for="createCharacter">Create your character</label></button>
                     </div>
                 </div>
             </div>

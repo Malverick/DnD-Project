@@ -22,6 +22,7 @@ $(".charClass").click(function () {
 // test jquery ui dropdowns
 $(function () {
     $("#racialChoice").selectmenu();
+    $("#classChoice").selectmenu();
 });
 // async function getRaces() {
 //     const raceResponse = await fetch('http://localhost:8080/dndchars/getThingRace');
@@ -47,8 +48,8 @@ function character(name, raceID, classID) {
 async function postCharacter() {
     var char = new character()
     char.Name = document.getElementById("enteredName").value;
-    var charRace = $("#racialChoiceText").text();
-    var charClass = $("#classChoiceText").text();
+    var charRace = $("#racialChoice").val();
+    var charClass = $("#classChoice").val();
     console.log();
 
     //Race Selector

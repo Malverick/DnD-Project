@@ -9,18 +9,13 @@ body {
     width:85%;
     background-color:darkgrey;
     height:auto;
-    padding:0;
+    padding:20px;
 
 }
 #header {
-    display: flex;
-    align-items: center;
     background-color: #969696;
-    justify-content:center;
-    flex-direction:column;
 }
 #hTitle {
-    justify-content: space-around;
     font-size: 25px;
     font-weight: 600;
 }
@@ -52,7 +47,8 @@ body {
 }
 
 input {
-  color: darkgray;
+  color: ghostwhite;
+  background-color:#404040;
 }
 
 #mainContent {
@@ -62,19 +58,22 @@ input {
 }
 #charListing {
     flex-direction: column;
+    background-color: #939292;
+    border: solid black 2px;
+    border-radius: 4px;
 }
-#charCreator{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color:red;
+#charCreator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #939292;
+    border:solid black 2px;
+    border-radius:4px;
 }
 
 .charColumn{
     flex-direction:column;
     align-items:center;
-}
-label{
 }
 select {
     background-color: #8e8d8d;
@@ -87,13 +86,15 @@ option:hover {
 ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 li{
-    list-style-type:none;
     text-align:center;
+    display:inline;
 }
 .pageObject {
-    margin: 15px;
+    width:auto;
+    margin: 10px;
     background-color: #404040;
     color:ghostwhite;
     display:flex;
