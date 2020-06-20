@@ -57,10 +57,12 @@ input {
     justify-content:space-around;
 }
 #charListing {
+    display:flex;
     flex-direction: column;
     background-color: #939292;
     border: solid black 2px;
     border-radius: 4px;
+    padding:0px 10px;
 }
 #charCreator {
     display: flex;
@@ -141,6 +143,12 @@ li{
 
 .dropButton:hover {
     background-color: #404040;
+}
+
+.savedUserChar {
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+    background-color: #A9A9A9;
 }
 
 #i01 {

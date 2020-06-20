@@ -47,7 +47,11 @@ function character(name, raceID, classID) {
 }
 async function postCharacter() {
     var char = new character()
-    char.Name = document.getElementById("enteredName").value;
+    if (document.getElementById("enteredName").value === "") {
+        await getRandomName();
+    } else {
+        char.Name = document.getElementById("enteredName").value;
+    }
     var charRace = $("#racialChoice").val();
     var charClass = $("#classChoice").val();
     console.log();
@@ -144,9 +148,25 @@ async function postCharacter() {
     //}
     // Add the script to post the character details to the API below this point
 
-        console.log(char.Name +"-"+ char.raceID +"-"+ char.classID);
+    console.log(char.Name + "-" + char.raceID + "-" + char.classID);
+    console.log('<div class="savedUserChar">' + char.Name + ' - ' + charRace + ' - ' + charClass + '</div>');
+
+    $("#charListing").append('<div class="savedUserChar">' + char.Name + ' - ' + charRace + ' - ' + charClass + '</div>');
+
     //console.log('http://localhost:8080/dndchars/addThingChar/' + charName.value + "/" + charRace.value + "/" + charClass.value);
     //const characterResponse = await fetch('http://localhost:8080/dndchars/addThingChar/' + charName.value + "/" + charRace.value + "/" + charClass.value, { method: 'POST' });
+}
+
+async function getRandomName() {
+    $.ajax({
+        url: 'https://cors-anywhere.herokuapp.com/https://randommer.io/api/Name?nameType=firstname&quantity=1',
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("X-Api-Key", "4d0ed583a2fd49e3accf5987352c72c2")
+        }, success: function (data) {
+            alert(data);
+            //process the JSON data etc
+        }
+    })
 }
 
 // async function deleteCharacter() {
