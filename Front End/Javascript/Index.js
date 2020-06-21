@@ -48,13 +48,30 @@ function character(name, raceID, classID) {
 async function postCharacter() {
     var char = new character()
     if (document.getElementById("enteredName").value === "") {
-        await getRandomName();
+        getRandomName(char);
     } else {
         char.Name = document.getElementById("enteredName").value;
+        createCharacter(char);
     }
+}
+
+function getRandomName(cName) {
+    $.ajax({
+        url: 'https://cors-anywhere.herokuapp.com/https://randommer.io/api/Name?nameType=firstname&quantity=1',
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("X-Api-Key", "4d0ed583a2fd49e3accf5987352c72c2")
+        }, success: function(data) {
+            console.log(data);
+            //process the JSON data etc
+            cName.Name = data;
+            createCharacter(cName);
+        }
+    })
+}
+
+function createCharacter(char) {
     var charRace = $("#racialChoice").val();
     var charClass = $("#classChoice").val();
-    console.log();
 
     //Race Selector
     switch (charRace) {
@@ -125,48 +142,8 @@ async function postCharacter() {
             char.classID = 12;
             break;
     }
-    // Check to make sure the use has entered all the required fields
-    //var selectNRC = "Please enter your chosen ";
-    //var temp;
-    //if (char.Name == "") {
-    //    temp = "name ";
-    //    selectNRC.concat(temp);
-    //    console.log(selectNRC);
-    //    return;
-    //}
-    //if (char.raceID == "#rID") {
-    //    temp = "race ";
-    //    selectNRC.concat(temp);
-    //    console.log(selectNRC);
-    //    return;
-    //}
-    //if (char.classID == "#cID") {
-    //    temp = "class ";
-    //    selectNRC.concat(temp);
-    //    console.log(selectNRC);
-    //    return;
-    //}
-    // Add the script to post the character details to the API below this point
-
-    console.log(char.Name + "-" + char.raceID + "-" + char.classID);
-    console.log('<div class="savedUserChar">' + char.Name + ' - ' + charRace + ' - ' + charClass + '</div>');
 
     $("#charListing").append('<div class="savedUserChar">' + char.Name + ' - ' + charRace + ' - ' + charClass + '</div>');
-
-    //console.log('http://localhost:8080/dndchars/addThingChar/' + charName.value + "/" + charRace.value + "/" + charClass.value);
-    //const characterResponse = await fetch('http://localhost:8080/dndchars/addThingChar/' + charName.value + "/" + charRace.value + "/" + charClass.value, { method: 'POST' });
-}
-
-async function getRandomName() {
-    $.ajax({
-        url: 'https://cors-anywhere.herokuapp.com/https://randommer.io/api/Name?nameType=firstname&quantity=1',
-        beforeSend: function (xhr) {
-            xhr.setRequestHeader("X-Api-Key", "4d0ed583a2fd49e3accf5987352c72c2")
-        }, success: function (data) {
-            alert(data);
-            //process the JSON data etc
-        }
-    })
 }
 
 // async function deleteCharacter() {

@@ -35,49 +35,51 @@
             <div id="charListing">
                 <label for="charListing">Existing Charaters</label>
             </div>
-            <div id="charCreator">
-                <div class="charColumn">
-                    <fieldset class="pageObject">
-                        <label for="racialChoice">Choose Your Race</label>
-                        <select name="racialChoice" id="racialChoice">
-                            <option class="charRace">Dwarf</option>
-                            <option class="charRace">Elf</option>
-                            <option class="charRace">Halfling</option>
-                            <option class="charRace">Human</option>
-                            <option class="charRace">Dragonborn</option>
-                            <option class="charRace">Gnome</option>
-                            <option class="charRace">Half-Elf</option>
-                            <option class="charRace">Half-Orc</option>
-                            <option class="charRace">Tiefling</option>
-                        </select>
-                    </fieldset>
-                   
-                </div>
-                <div class="charColumn">
-                    <div class="pageObject">
-                        <input id="enteredName" class="pageButton" type="text" placeholder="Enter your character name...">
+            <div name="charCreator" id="charCreator">
+                <label for="charCreator">Create a level one character</label>
+                <div class="horizontal">
+                    <div class="charColumn">
+                        <fieldset class="pageObject">
+                            <label for="racialChoice">Choose Your Race</label>
+                            <select name="racialChoice" id="racialChoice">
+                                <option class="charRace">Dwarf</option>
+                                <option class="charRace">Elf</option>
+                                <option class="charRace">Halfling</option>
+                                <option class="charRace">Human</option>
+                                <option class="charRace">Dragonborn</option>
+                                <option class="charRace">Gnome</option>
+                                <option class="charRace">Half-Elf</option>
+                                <option class="charRace">Half-Orc</option>
+                                <option class="charRace">Tiefling</option>
+                            </select>
+                        </fieldset>
                     </div>
-                    <fieldset class="pageObject">
-                        <label for="classChoice">Choose Your Class</label>
-                        <select name="classChoice" id="classChoice">
-                            <option class="charClass">Barbarian</option>
-                            <option class="charClass">Bard</option>
-                            <option class="charClass">Cleric</option>
-                            <option class="charClass">Druid</option>
-                            <option class="charClass">Fighter</option>
-                            <option class="charClass">Monk</option>
-                            <option class="charClass">Paladin</option>
-                            <option class="charClass">Ranger</option>
-                            <option class="charClass">Rogue</option>
-                            <option class="charClass">Sorcerer</option>
-                            <option class="charClass">Warlock</option>
-                            <option class="charClass">Wizard</option>
-                        </select>
-                    </fieldset>
-                </div>
-                <div class="charColumn">
-                    <div class="pageObject">
-                        <button name="createCharacter" class="pageButton" onclick="postCharacter()"><label for="createCharacter">Create your character</label></button>
+                    <div class="charColumn">
+                        <div class="pageObject">
+                            <input id="enteredName" class="pageButton" type="text" placeholder="Enter your character name...">
+                        </div>
+                        <fieldset class="pageObject">
+                            <label for="classChoice">Choose Your Class</label>
+                            <select name="classChoice" id="classChoice">
+                                <option class="charClass">Barbarian</option>
+                                <option class="charClass">Bard</option>
+                                <option class="charClass">Cleric</option>
+                                <option class="charClass">Druid</option>
+                                <option class="charClass">Fighter</option>
+                                <option class="charClass">Monk</option>
+                                <option class="charClass">Paladin</option>
+                                <option class="charClass">Ranger</option>
+                                <option class="charClass">Rogue</option>
+                                <option class="charClass">Sorcerer</option>
+                                <option class="charClass">Warlock</option>
+                                <option class="charClass">Wizard</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <div class="charColumn">
+                        <div class="pageObject">
+                            <button name="createCharacter" class="pageButton" onclick="postCharacter()"><label for="createCharacter">Create your character</label></button>
+                        </div>
                     </div>
                 </div>
             </div>

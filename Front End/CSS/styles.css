@@ -65,12 +65,16 @@ input {
     padding:0px 10px;
 }
 #charCreator {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align:center;
     background-color: #939292;
     border:solid black 2px;
     border-radius:4px;
+    height:170px;
+}
+.horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .charColumn{
@@ -148,7 +152,6 @@ li{
 .savedUserChar {
     border-top: solid black 1px;
     border-bottom: solid black 1px;
-    background-color: #A9A9A9;
 }
 
 #i01 {
