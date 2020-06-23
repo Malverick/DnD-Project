@@ -6,7 +6,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./Bootstrap\css\bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="CSS\createAccount.css" >
+    <link rel="stylesheet" type="text/css" href="CSS\createAccount.css">
     <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -32,35 +32,26 @@
     </div>
     <div id="wrapper">
         <div id="loginForm">
-            <div class="fieldNames column">
-                <div class="pageObject">
-                    <label for="eMailAddr">Email Address: </label>
-                </div>
-                <div class="pageObject">
-                    <label for="password">Password: </label>
-                </div>
-                <div class="pageObject">
-                    <label for="password">Re-enter password: </label>
-                </div>
-            </div>
-            <div class="fields column">
-                <div class="pageObject">
-                    <input type="text" name="eMailAddr" class="userDetails" placeholder="example@email.com" />
-                </div>
-                <div class="pageObject">
-                    <input type="password" name="password1" class="userDetails" id="password1" placeholder="password" />
-                    <input type="checkbox" onclick="showPassword()"> Show Password
-                </div>
-                <div class="pageObject">
-                    <input type="password" name="password2" class="userDetails" id="password2" placeholder="password" />
-                    <input type="checkbox" onclick="showPassword()"> Show Password
-                </div>
-            </div>
-                
-         </div>
-
-        <script src="Javascript/accountCreate.js"></script>
-        <script src="jquery-ui/jquery-ui.js"></script>
+            <ul class="pageObject">
+                <li><label class="loginLabel" for="eMailAddr">Email Address: </label></li>
+                <li><input  type="text" name="eMailAddr" class="userDetails" placeholder="example@email.com" /></li>
+            </ul>
+            <ul class="pageObject">
+                <li><label class="loginLabel" for="password">Password: </label></li>
+                <li><input type="password" name="password1" class="userDetails" id="password1" placeholder="password" /></li>
+                <li><input type="checkbox" name="pass1toggle" onclick="showPassword1()"> Show Password</li>
+            </ul>
+            <ul class="pageObject">
+                <li><label class="loginLabel" for="password">Re-enter Password: </label></li>
+                <li><input type="password" name="password1" class="userDetails" id="password1" placeholder="password" /></li>
+                <li><input type="checkbox" name="pass1toggle" onclick="showPassword2()"> Show Password</li>
+            </ul>
+            <ul class="pageObject center">
+                <li><button value="Submit"> Submit </button></li>
+            </ul>
+        </div>
     </div>
+    <script src="Javascript/accountCreate.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
 </body>
 </html>
