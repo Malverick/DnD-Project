@@ -16,15 +16,18 @@ function showPassword2() {
     }
 }
 
+$(".invalidEmail").hide();
 $("#eMailAddr").change(function () {
     var input = $(this).val();
     var comparitor = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
     if (comparitor.test(input) == false) {
         $(this).css("color", "#c47171");
         console.log("false");
+        $(".invalidEmail").show();
     } else {
         $(this).css("color", "ghostwhite");
         console.log("true");
+        $(".invalidEmail").hide();
 
     }
 }); 

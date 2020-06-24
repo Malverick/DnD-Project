@@ -80,7 +80,7 @@ ul {
 
 li {
     text-align: center;
-    display: inline;
+    display: inline-block;
 }
 
 .pageObject {
@@ -144,7 +144,6 @@ button {
     width: 530px;
 }
 
-
 .fieldNames {
     text-align: right;
 }
@@ -156,4 +155,7 @@ button {
 .loginLabel {
     width: 130px;
     text-align: right;
+}
+.invalidEmail{
+
 }
