@@ -93,6 +93,7 @@ li {
 
 .center {
     margin: 0 auto;
+    text-align:center;
 }
 
 .dropdownParent {
@@ -110,14 +111,14 @@ li {
     z-index: 1;
 }
 
-    .dropdown-content li {
-        padding: 3px 0px;
-        width: 200px;
-        background-color: #545454;
-        color: ghostwhite;
-        border-bottom: solid black 1px;
-        border-radius: 5px;
-    }
+.dropdown-content li {
+    padding: 3px 0px;
+    width: 200px;
+    background-color: #545454;
+    color: ghostwhite;
+    border-bottom: solid black 1px;
+    border-radius: 5px;
+}
 
 .dropButton:hover {
     background-color: #404040;
@@ -130,8 +131,16 @@ li {
 
 button {
     width: 150px;
-    background-color: lightslategrey;
+    background-color: #a5a5a5;
+    border-radius: 5px;
 }
+    button:hover{
+        border-color:ghostwhite;
+    }
+    button:active {
+        background-color: #5b5b5b;
+    }
+    button:
 
 #loginForm {
     background-color: #404040;
