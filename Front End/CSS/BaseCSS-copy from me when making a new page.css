@@ -1,0 +1,134 @@
+body {
+    background-color: lightgrey;
+    margin: 0;
+    padding: 0;
+    font-family: 'Zilla Slab', serif;
+}
+#wrapper{
+    margin:0 auto;
+    width:85%;
+    background-color:darkgrey;
+    height:auto;
+    padding:20px;
+
+}
+#header {
+    background-color: #969696;
+}
+#hTitle {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.hLogo {
+    height: 50px;
+    margin:5px;
+}
+
+.navButton {
+    height: 48px;
+    width:auto;
+    background-color: #404040;
+    color:ghostwhite;
+}
+.navButton:hover {
+    height: 48px;
+    width: auto;
+    background-color: #b7b7b7;
+    color: black;
+}
+
+input {
+  color: ghostwhite;
+  background-color:#404040;
+}
+
+#mainContent {
+    margin-top:15px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    background-color: #8e8d8d;
+    color: ghostwhite;
+}
+option:hover {
+    background-color: ghostwhite;
+    color: #8e8d8d;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+li{
+    text-align:center;
+    display:inline;
+}
+.pageObject {
+    width:auto;
+    margin: 10px;
+    background-color: #404040;
+    color:ghostwhite;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    border:solid black 2px;
+    border-radius:4px;
+    text-align:center;
+}
+.pageButton {
+    text-decoration: none;
+    height: 48px;
+    width: 200px;
+    background-color: #404040;
+    color: ghostwhite;
+}
+.center {
+    position:relative;
+    text-align:center;
+    width:100%;
+    top:30%;
+}
+
+.dropdownParent {
+    position: relative;
+}
+.dropdownParent:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    z-index: 1;
+}
+.dropdown-content li {
+    padding: 3px 0px;
+    width: 200px;
+    background-color: #545454;
+    color: ghostwhite;
+    border-bottom: solid black 1px;
+    border-radius: 5px;
+}
+
+.dropButton:hover {
+    background-color: #404040;
+}
+
+.savedUserChar {
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+
+button {
+    width: 150px;
+    background-color: lightslategrey;
+}
