@@ -22,7 +22,7 @@
     <div id="header">
         <div id="hTitle">
             <ul>
-                <li><img class="hLogo" src="CSS\DnD Logo.jpg"></li>
+                <li><img class="hLogo" src="Images\DnD Logo.jpg"></li>
                 <li>D'n'D 5e Helper</li>
                 <li><button class="navButton" onclick="location.href='delete.html'">Character Creator</button></li>
                 <li><button class="navButton" onclick="location.href='update.html'">NPC Creator</button></li>
@@ -32,35 +32,37 @@
     </div>
     <div id="wrapper">
         <div id="loginForm">
-            <ul class="pageObject">
-                <li><label class="loginLabel" for="eMailAddr">Email Address: </label></li>
-                <li><input type="text" name="eMailAddr" id="eMailAddr" class="userDetails" placeholder="example@email.com" /></li>
-                <li><span id="invalidEmail">Invalid Email</span></li>
-            </ul>
-            <div id="invalidPass" class="pageObject center">
+            <form>
                 <ul class="pageObject">
-                    <li><span style="font-size:20px;" class="center">Invalid Password:</span></li>
-                    <li><span>Please enter a password between 8 to 15 characters, which contains at least one lowercase letter, one uppercase letter, one numeric digit, and one special character</span></li>
+                    <li><label class="loginLabel" for="eMailAddr">Email Address: </label></li>
+                    <li><input type="text" name="eMailAddr" id="eMailAddr" class="userDetails" placeholder="example@email.com" /></li>
+                    <li><span id="invalidEmail">Invalid Email</span></li>
                 </ul>
-            </div>
-            <ul class="pageObject">
-                <li><label class="loginLabel" for="password">Password: </label></li>
-                <li><input type="password" name="password1" class="userDetails" id="password1" placeholder="password" /></li>
-                <li><input type="checkbox" name="pass1toggle" onclick="showPassword1()"> Show Password</li>
-            </ul>
-            <ul class="pageObject">
-                <li><label class="loginLabel" for="password">Confirm Password: </label></li>
-                <li><input type="password" name="password2" class="userDetails" id="password2" placeholder="password" /></li>
-                <li><input type="checkbox" name="pass2toggle" onclick="showPassword2()"> Show Password</li>
-            </ul>
-            <div id="passMatcher" class="pageObject center">
+                <div id="invalidPass" class="pageObject center">
+                    <ul class="pageObject">
+                        <li><span style="font-size:20px;" class="center">Invalid Password:</span></li>
+                        <li><span>Please enter a password between 8 to 15 characters, which contains at least one lowercase letter, one uppercase letter, one numeric digit, and one special character</span></li>
+                    </ul>
+                </div>
                 <ul class="pageObject">
-                    <li><span class="center">Passwords do not match</span></li>
+                    <li><label class="loginLabel" for="password">Password: </label></li>
+                    <li><input type="password" name="password1" class="userDetails" id="password1" placeholder="password" /></li>
+                    <li><input type="checkbox" name="pass1toggle" onclick="showPassword1()"> Show Password</li>
                 </ul>
-            </div>
-            <ul class="pageObject center">
-                <li><button value="Submit"> Create Account </button></li>
-            </ul>
+                <ul class="pageObject">
+                    <li><label class="loginLabel" for="password">Confirm Password: </label></li>
+                    <li><input type="password" name="password2" class="userDetails" id="password2" placeholder="password" /></li>
+                    <li><input type="checkbox" name="pass2toggle" onclick="showPassword2()"> Show Password</li>
+                </ul>
+                <div id="passMatcher" class="pageObject center">
+                    <ul class="pageObject">
+                        <li><span class="center">Passwords do not match</span></li>
+                    </ul>
+                </div>
+                <ul class="pageObject center">
+                    <li><button value="Submit"> Create Account </button></li>
+                </ul>
+            </form>
         </div>
 
     </div>

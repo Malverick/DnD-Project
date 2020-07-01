@@ -7,10 +7,9 @@ body {
 #wrapper{
     margin:0 auto;
     width:85%;
-    background-color:darkgrey;
+    background-color:#cce5ff;
     height:auto;
     padding:20px;
-
 }
 #header {
     background-color: #969696;
