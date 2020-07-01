@@ -9,6 +9,19 @@ body {
     padding: 0;
     font-family: 'Zilla Slab', serif;
 }
+.test{
+    border: 5px solid ghostwhite;
+    background-color: black;
+    color: ghostwhite;
+    font-size: 16px;
+    font-weight: 700;
+}
+.genText{
+        color: ghostwhite;
+    }
+.genText:hover{
+    color: black;
+}
 #wrapper {
     margin: 0 auto;
     width: 85%;
