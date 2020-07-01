@@ -17,6 +17,7 @@ body {
 }
 .header {
     background-color: black;
+    color: ghostwhite;
     height:auto;
     border: 5px solid ghostwhite;
     border-radius: 5px;
@@ -29,6 +30,9 @@ body {
     font-weight: 700;
     vertical-align: middle;
 }
+.below-header{
+    margin-top: 125px;
+}
 .in-line{
     justify-content: center;
 }
@@ -39,12 +43,12 @@ body {
 .navButton {
     width: auto;
     padding:5px 45px;
+    border:1px solid black;
+
     text-align: center;
     color: ghostwhite;
     font-size: 16px;
     font-weight: 700;
-    border-right: 1px solid ghostwhite;
-    border-left: 1px solid ghostwhite;
     transition: 0.2s;
     cursor: pointer;
 }
@@ -53,7 +57,6 @@ body {
     color: black;
     border:1px solid white;
     border-radius:5px;
-    padding:15px 45px;
 }
 .navDropDown{
     width: auto;
