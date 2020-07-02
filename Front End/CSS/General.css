@@ -9,7 +9,7 @@ body {
     padding: 0;
     font-family: 'Zilla Slab', serif;
 }
-.test{
+.dropdown-style{
     border: 5px solid ghostwhite;
     background-color: black;
     color: ghostwhite;
@@ -36,6 +36,12 @@ body {
     border-radius: 5px;
     margin: 5px;
 }
+.main-content{
+    background-color: black;
+    color: ghostwhite;
+border: 5px solid ghostwhite;
+    border-radius: 5px;
+}
 .hTitle{
     margin-left: 5px;
     color: ghostwhite;
@@ -57,7 +63,8 @@ body {
     width: auto;
     padding:5px 45px;
     border:1px solid black;
-
+    border-radius: 5px;
+    background-color: black; 
     text-align: center;
     color: ghostwhite;
     font-size: 16px;
