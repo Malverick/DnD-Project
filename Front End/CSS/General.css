@@ -34,13 +34,13 @@ body {
     height:auto;
     border: 5px solid ghostwhite;
     border-radius: 5px;
-    margin: 5px;
 }
 .main-content{
     background-color: black;
     color: ghostwhite;
-border: 5px solid ghostwhite;
+    border: 5px solid ghostwhite;
     border-radius: 5px;
+    margin: 5px auto;
 }
 .hTitle{
     margin-left: 5px;
@@ -71,6 +71,7 @@ border: 5px solid ghostwhite;
     font-weight: 700;
     transition: 0.2s;
     cursor: pointer;
+    margin: 5px;
 }
 .navButton:hover {
     background-color: #969696;
